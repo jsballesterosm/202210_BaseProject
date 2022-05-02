@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 center">
+      <img src="assets/images/image 1.jpg" alt="imagen principal" title="imagen principal" />
+    </div>
+    <div class="col-md-8">
+      <table class="table mt-3">
+        <thead class="table-dark ">
+          <tr>
+            <th>
+              #
+            </th>
+            <th>
+              Marca
+            </th>
+            <th>
+              Linea
+            </th>
+            <th>
+              Modelo
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehicle of vehicles">
+            <td>
+              {{vehicle.id}}
+            </td>
+            <td>
+              {{vehicle.marca}}
+            </td>
+            <td>
+              {{vehicle.linea}}
+            </td>
+            <td>
+              {{vehicle.modelo}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   </div>
+  <div class="row">
+    <!-- totales -->
+    <div class="col-md-12">
+      <p class="middle" *ngFor="let row of resumen">Total {{row.marca}}: {{row.cantidad}}</p>
+    </div>
+  </div>
+</div>
